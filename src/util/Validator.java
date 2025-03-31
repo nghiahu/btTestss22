@@ -3,11 +3,11 @@ package util;
 import java.util.Scanner;
 
 public class Validator {
-    public static int valueInt(Scanner scanner) throws Exception {
+    public static int valueInt(Scanner scanner) throws NumberFormatException {
         if(scanner.hasNextInt()) {
             return scanner.nextInt();
         }else {
-            throw new Exception("Dữ liệu nhập vào không phải số nguyên");
+            throw new NumberFormatException("Dữ liệu nhập vào không phải số nguyên");
         }
     }
     public static float valueFloat(Scanner scanner) throws NumberFormatException {
@@ -54,7 +54,7 @@ public class Validator {
     }
     public static String validatePhone(Scanner scanner) throws Exception{
         String value = scanner.nextLine();
-        String regex = "^[096|097|098|086]\\d{7}$";
+        String regex = "^[096|097|098|086]+\\d{7}$";
         if(value.matches(regex)) {
             return value;
         }else {
