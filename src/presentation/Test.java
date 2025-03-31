@@ -24,6 +24,7 @@ public class Test {
                     try {
                         System.out.print("Nhập vào số nguyên: ");
                         System.out.println("Số nguyên vừa nhập: " + Validator.valueInt(scanner));
+                        scanner.nextLine();
                     }catch (Exception e){
                         System.out.println(e.getMessage());
                     }
@@ -31,7 +32,8 @@ public class Test {
                 case 2:
                     try {
                         System.out.print("Nhập vào số thực float: ");
-                        System.out.println("Số nguyên vừa nhập: " + Validator.valueFloat(scanner));
+                        System.out.println("Số thực vừa nhập: " + Validator.valueFloat(scanner));
+                        scanner.nextLine();
                     }catch (NumberFormatException e){
                         System.out.println(e.getMessage());
                     }
@@ -39,7 +41,8 @@ public class Test {
                 case 3:
                     try {
                         System.out.print("Nhập vào số thực double: ");
-                        System.out.println("Số nguyên vừa nhập: " + Validator.valueDouble(scanner));
+                        System.out.println("Số thực vừa nhập: " + Validator.valueDouble(scanner));
+                        scanner.nextLine();
                     }catch (NumberFormatException e){
                         System.out.println(e.getMessage());
                     }
@@ -47,7 +50,7 @@ public class Test {
                 case 4:
                     try {
                         System.out.print("Nhập vào giá trị bolean: ");
-                        System.out.println("Số nguyên vừa nhập: " + Validator.validateBolean(scanner));
+                        System.out.println("Giá trị vừa nhập: " + Validator.validateBolean(scanner));
                     }catch (Exception e){
                         System.out.println(e.getMessage());
                     }
@@ -55,7 +58,7 @@ public class Test {
                 case 5:
                     try {
                         System.out.print("Nhập vào một chuỗi: ");
-                        System.out.println("Số nguyên vừa nhập: " + Validator.validateString(scanner,10,100));
+                        System.out.println("Chuỗi vừa nhập: " + Validator.validateString(scanner,10,100));
                     }catch (Exception e){
                         System.out.println(e.getMessage());
                     }
@@ -63,7 +66,7 @@ public class Test {
                 case 6:
                     try {
                         System.out.print("Nhập vào một email: ");
-                        System.out.println("Số nguyên vừa nhập: " + Validator.validateEmail(scanner));
+                        System.out.println("email vừa nhập: " + Validator.validateEmail(scanner));
                     }catch (Exception e){
                         System.out.println(e.getMessage());
                     }
@@ -71,7 +74,7 @@ public class Test {
                 case 7:
                     try {
                         System.out.print("Nhập vào một số điệ thoai: ");
-                        System.out.println("Số nguyên vừa nhập: " + Validator.validatePhone(scanner));
+                        System.out.println("Số điện thoại vừa nhập: " + Validator.validatePhone(scanner));
                     }catch (Exception e){
                         System.out.println(e.getMessage());
                     }
